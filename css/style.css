@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color:#bbcbcd;
+    text-decoration: none;
+}
+
+a:visited {
+    color :#bbcbcd;
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: #2c3e50 !important; /* Elige el color que prefieras */
+}
+
+/* ----------- Body ----------- */
+
+body {    
+    font-family: quickSand; /* Importada desde Google en el HTML*/    
+}
+
+section{
+    padding: 5% 2% 0% 2%;
+}
+
+.title {
+    padding: 10px 20px;
+    color: #154854;
+    text-align: center;
+}
+/* ----------- Index ----------- */
+.hero{
+    /* 1. Definición del Flex Contenedor */
+    display: flex;
+    /* Centrado del h1: */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    
+    height: 100vh; 
+    width: 100%;
+    /* CLAVE: Necesario para posicionar el video de forma absoluta dentro de él */
+    position: relative; 
+    /* Necesario para que el h1 aparezca por encima del video que será absoluto */
+    z-index: 0; 
+    /* Si no se usa z-index, solo el h1 requiere el display: flex; */
+}
+
+.hero video{
+     /* Posiciona el video en la parte inferior de la pila (capa de fondo) */
+    position: absolute; 
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    /* CLAVE: Ajuste para cubrir sin perder aspecto */
+    object-fit: cover; 
+    /* Manda el video al fondo de la pila, bajo el h1 */
+    z-index: -1; 
+}
+
+.hero h1{
+    padding: 10px 20px;
+    color:aliceblue;
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.flex-container{
+    display: flex;    
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-item{
+    padding: 2%;
+}
+
+/* ----------- Contact ----------- */
+.contacto {
+    margin: 2.5%;
+}
+
+.contacto #btnEnviar {
+    background-color: cadetblue;
+    width: 75px;
+    border-radius: 10%;
+}
+
+.ubicacion {
+    margin: 20px;    
+}
+
+.campo-form {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  margin-bottom: 10px;
+}
+
+.campo-form label {
+  width: 100px; 
+}
+
+/* ----------- Proyects ----------- */
+.proyect {
+    margin-bottom: 10px;
+}
+.proyect label {
+    display: flex;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+/* ------------------------------- */
+
+/* ----------- Footer ----------- */
+
+footer {
+    padding: 0%;
+    margin: 0%;
+    background-color: #154854;
+    color:aliceblue;
+}
+
+#copy {
+    font-weight: 600;
+    text-align: center;
+}
+#wsp {
+    text-align: center; 
+    color: #111401;    
+}
+
+#wsp:visited{
+    color: #bdda3e;
+}
+/*********/
+@media (max-width: 480px){
+    .flex-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-container img{
+        width: 90dvi;
+    }
+
+}
