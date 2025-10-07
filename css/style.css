@@ -14,11 +14,10 @@ a:visited {
 }
 
 .navbar {
-    background-color: #2c3e50 !important; /* Elige el color que prefieras */
+    background-color: #154854 !important;
 }
 
 /* ----------- Body ----------- */
-
 body {    
     font-family: quickSand; /* Importada desde Google en el HTML*/    
 }
@@ -32,34 +31,27 @@ section{
     color: #154854;
     text-align: center;
 }
+/* ------------------------------- */
+
+
 /* ----------- Index ----------- */
-.hero{
-    /* 1. Definición del Flex Contenedor */
+.hero{    
     display: flex;
-    /* Centrado del h1: */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center;     /* Centra verticalmente */
-    
+    justify-content: center;
+    align-items: center;    
     height: 100vh; 
     width: 100%;
-    /* CLAVE: Necesario para posicionar el video de forma absoluta dentro de él */
     position: relative; 
-    /* Necesario para que el h1 aparezca por encima del video que será absoluto */
-    z-index: 0; 
-    /* Si no se usa z-index, solo el h1 requiere el display: flex; */
+    z-index: 0;
 }
 
-.hero video{
-     /* Posiciona el video en la parte inferior de la pila (capa de fondo) */
+.hero video{     
     position: absolute; 
     top: 0;
     left: 0;
-    
     width: 100%;
     height: 100%;
-    /* CLAVE: Ajuste para cubrir sin perder aspecto */
     object-fit: cover; 
-    /* Manda el video al fondo de la pila, bajo el h1 */
     z-index: -1; 
 }
 
@@ -69,7 +61,6 @@ section{
     text-align: center;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-
 
 .flex-container{
     display: flex;    
@@ -81,6 +72,55 @@ section{
 .flex-item{
     padding: 2%;
 }
+/* ------------------------------- */
+
+
+/* ----------- Proyects ----------- */
+.grid-container{
+    display: grid;
+    grid-template-areas: "title title"
+                         "proyect1 proyect2"
+                         "proyect3 proyect4";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.grid-container .title{
+    grid-area: title;    
+}
+.proyect1{
+    grid-area: proyect1;    
+}
+.proyect2{
+    grid-area: proyect2;    
+}
+
+.proyect3{
+    grid-area: proyect3;
+    padding-bottom: 20px;
+}
+
+.proyect4{
+    grid-area: proyect4;
+    padding-bottom: 20px;
+}
+
+.grid-container img {
+    max-width: 100%;
+    height: auto;    
+    margin: 0 auto 10px auto;
+}
+
+.proyect label {
+    display: flex;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+/* ------------------------------- */
+
 
 /* ----------- Contact ----------- */
 .contacto {
@@ -107,21 +147,10 @@ section{
 .campo-form label {
   width: 100px; 
 }
-
-/* ----------- Proyects ----------- */
-.proyect {
-    margin-bottom: 10px;
-}
-.proyect label {
-    display: flex;
-    font-weight: 500;
-    margin-bottom: 25px;
-}
-
 /* ------------------------------- */
 
-/* ----------- Footer ----------- */
 
+/* ----------- Footer ----------- */
 footer {
     padding: 0%;
     margin: 0%;
@@ -141,7 +170,9 @@ footer {
 #wsp:visited{
     color: #bdda3e;
 }
-/*********/
+/* ------------------------------- */
+
+/* ----------- Media Queries ----------- */
 @media (max-width: 480px){
     .flex-container{
         flex-direction: column;
@@ -152,4 +183,16 @@ footer {
         width: 90dvi;
     }
 
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-areas: "title"
+                            "proyect1" 
+                            "proyect2"
+                            "proyect3" 
+                            "proyect4";      
+    }
+    
+    .grid-container img{
+        width: 90dvi;        
+    }
 }
