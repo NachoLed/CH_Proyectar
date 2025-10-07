@@ -91,9 +91,11 @@ section{
 .grid-container .title{
     grid-area: title;    
 }
+
 .proyect1{
     grid-area: proyect1;    
 }
+
 .proyect2{
     grid-area: proyect2;    
 }
@@ -114,11 +116,10 @@ section{
     margin: 0 auto 10px auto;
 }
 
-.proyect label {
-    display: flex;
-    font-weight: 500;
-    margin-bottom: 25px;
+.grid-container label{
+    display: block;
 }
+
 /* ------------------------------- */
 
 
@@ -162,6 +163,7 @@ footer {
     font-weight: 600;
     text-align: center;
 }
+
 #wsp {
     text-align: center; 
     color: #111401;    
