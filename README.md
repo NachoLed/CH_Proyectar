@@ -24,7 +24,7 @@ El proyecto está compuesto principalmente por archivos **HTML** y **CSS**.
 |------------------|:------------------:|:-------------------:|:-------------------------------:|
 | `index.html`     |        ✔️          |        ✔️          | Flexbox                        |
 | `projects.html`  |        ✔️          |        ✔️          | Grid                           |
-| `contacts.html`  |        ✔️          |        ❌          | Flexbox + Sistema de columnas de Bootstrap |
+| `contacts.html`  |        ✔️          |        ✔️          | Flexbox + Sistema de columnas de Bootstrap |
 
 - **index.html** y **contacts.html**: Se adaptan a mobile con media queries y muestran una disposición distinta respecto a desktop.
 - **projects.html**: Utiliza Grid para la disposición en desktop.
