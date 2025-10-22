@@ -1,0 +1,169 @@
+/* Estilos Globales y Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #bbcbcd;
+  text-decoration: none;
+}
+a:visited {
+  color: #bbcbcd;
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: #154854 !important;
+}
+
+/* ----------- Estructura Base ----------- */
+body {
+  font-family: quickSand;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+body main {
+  flex-grow: 1;
+}
+body section {
+  padding: 5% 2% 0% 2%;
+}
+
+.title {
+  padding: 10px 20px;
+  color: #154854;
+  text-align: center;
+}
+
+/* ----------- Index/Hero ----------- */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.hero h1 {
+  padding: 10px 20px;
+  color: aliceblue;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-container .flex-item {
+  padding: 2%;
+}
+
+/* ----------- Contacto ----------- */
+.contacto {
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+.contacto form {
+  padding: 30px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+.contacto form .campo-form {
+  display: block;
+  margin-bottom: 15px;
+  text-align: left;
+}
+.contacto form .campo-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.contacto form .campo-form input,
+.contacto form .campo-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.contacto form #btnEnviar {
+  display: block;
+  width: 100%;
+  background-color: #5f9ea0;
+  color: white;
+  padding: 10px 0;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.ubicacion {
+  margin: 0;
+  text-align: center;
+}
+.ubicacion h3 {
+  margin-bottom: 15px;
+}
+.ubicacion iframe {
+  width: 100%;
+  height: 450px;
+  max-width: 100%;
+}
+
+/* ----------- Footer ----------- */
+footer {
+  padding: 0%;
+  margin: 0%;
+  background-color: #154854;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer #copy {
+  font-weight: 600;
+  text-align: center;
+  padding-top: 2%;
+}
+
+/* ----------- Media Queries ----------- */
+@media (max-width: 480px) {
+  /* Uso del anidamiento (&) para aplicar estilos dentro del media query */
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .flex-container img {
+    width: 90dvi;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "proyect1" "proyect2" "proyect3" "proyect4";
+  }
+  .grid-container img {
+    width: 90dvi;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

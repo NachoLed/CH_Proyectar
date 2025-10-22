@@ -1,0 +1,132 @@
+@use "contact";
+@use "proyects";
+@use "variables";
+@use "animations";
+
+@mixin display( $justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #bbcbcd;
+    text-decoration: none;
+
+    &:visited {
+        color: #bbcbcd;
+        text-decoration: none;
+    }
+}
+
+.navbar {
+    background-color: variables.$brandColor !important;
+}
+
+body{
+    font-family:quickSand;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    main {
+        flex-grow: 1;
+    }
+
+    section {
+        padding: 5% 2% 0% 2%;
+    }
+}
+
+.title {
+    padding: 10px 20px;
+    color: variables.$brandColor;
+    text-align: center;
+}
+
+
+/* ----------- Index/Hero ----------- */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    h1 {
+        padding: 10px 20px;
+        color: variables.$brandTextColor;
+        text-align: center;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.flex-container {    
+    @include display(space-around, center);
+    flex-direction: row;        
+
+    .flex-item {
+        padding: 2%;
+    }
+}
+
+/* ----------- Footer ----------- */
+footer {
+    padding: 0%;
+    margin: 0%;
+    background-color: variables.$brandColor;
+    color: variables.$brandTextColor;
+    @include display(center, center);
+  
+
+    #copy {
+        font-weight: 600;
+        text-align: center;
+        padding-top: 2%;
+    }
+}
+
+/* ----------- Media Queries ----------- */
+@media (max-width: 480px) {    
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-container img {
+        width: 90dvi;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "title"
+                             "proyect1"
+                             "proyect2"
+                             "proyect3"
+                             "proyect4";
+    }
+
+    .grid-container img {
+        width: 90dvi;
+    }
+}

@@ -1,0 +1,44 @@
+/* ----------- Proyectos ----------- */
+.grid-container {
+    display: grid;
+    grid-template-areas: "title title"
+                         "proyect1 proyect2"
+                         "proyect3 proyect4";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+
+    .title {
+        grid-area: title;
+    }
+
+    .proyect1 {
+        grid-area: proyect1;
+    }
+
+    .proyect2 {
+        grid-area: proyect2;
+    }
+
+    .proyect3 {
+        grid-area: proyect3;
+        padding-bottom: 20px;
+    }
+
+    .proyect4 {
+        grid-area: proyect4;
+        padding-bottom: 20px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto 10px auto;
+    }
+
+    label {
+        display: block;
+    }
+}/* ------------------------------ */
