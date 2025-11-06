@@ -3,7 +3,12 @@
 Este repositorio contiene el proyecto **Proyectar Construcciones**, una landing page desarrollada como entrega para el curso de Desarrollo Web de CoderHouse.
 El foco está en la correcta maquetación, adaptabilidad y estética, cumpliendo con los siguientes requisitos:
 
-<img width="1920" height="917" alt="image" src="https://github.com/user-attachments/assets/a038aaee-c32b-49c8-95e4-0fa9da650da8" />
+## Links Útiles
+- **github repositorio:** https://github.com/NachoLed/CH_Proyectar
+- **github page:** https://nacholed.github.io/CH_Proyectar/
+- **host:** https://chproyectarv0.vercel.app/
+
+<img  alt="image" src="https://res.cloudinary.com/dgyrbu23e/image/upload/v1762401542/Site_animation_delnxv.gif" />
 
 
 ## Características principales
