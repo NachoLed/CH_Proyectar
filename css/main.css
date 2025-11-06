@@ -89,6 +89,9 @@
 .grid-container label {
   display: block;
 }
+.grid-container p {
+  font-size: 1.6rem;
+}
 
 /* ------------------------------ */
 /* ----------- Annimations ----------- */
@@ -222,7 +225,7 @@ body section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   position: relative;
   z-index: 0;
@@ -241,6 +244,7 @@ body section {
   color: aliceblue;
   text-align: center;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-size: 3.4rem;
 }
 
 .flex-container {
@@ -270,7 +274,41 @@ footer #copy {
 }
 
 /* ----------- Media Queries ----------- */
+/* ----------- Media Queries Tablet ----------- */
+@media (min-width: 481px) and (max-width: 900px) {
+  .hero {
+    height: 70vh;
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+    padding: 12px 20px;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .flex-container .flex-item {
+    padding: 1.5%;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "proyect1" "proyect2" "proyect3" "proyect4";
+    gap: 18px;
+  }
+  .grid-container p {
+    font-size: 1.4rem;
+  }
+}
+/* ----------- Media Queries Mobile ----------- */
 @media (max-width: 480px) {
+  .hero {
+    height: 50vh;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+    padding: 6px 10px;
+  }
   .flex-container {
     flex-direction: column;
     align-items: center;
@@ -281,6 +319,9 @@ footer #copy {
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-areas: "title" "proyect1" "proyect2" "proyect3" "proyect4";
+  }
+  .grid-container p {
+    font-size: 1rem;
   }
   .grid-container img {
     width: 90dvi;
